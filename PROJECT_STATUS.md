@@ -12,7 +12,7 @@
 - Procedural character/environment art and simple generated sounds.
 
 ## Next work
-Set up GitHub collaboration, then implement an intermediate hallway art pass on visual/hallway-polish: warmer lighting, textured surfaces, school details and improved first-person presentation. Preserve mechanics and compare actual rendered gameplay before expanding scope.
+Private repository created at https://github.com/AndrewVic6/hudson-budson with main and visual/hallway-polish. Hudson has not yet been invited; his GitHub username is needed. Next, implement an intermediate hallway art pass on visual/hallway-polish: warmer lighting, textured surfaces, school details and improved first-person presentation. Preserve mechanics and compare actual rendered gameplay before expanding scope.
 
 ## Validation record
 The supplied first-person package includes a report of 43 passing checks. Repository preparation has not rerun them or changed gameplay code.

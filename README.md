@@ -14,7 +14,7 @@ Walk toward locker 101 on your left, aim at it, and press **C**. Grab the bat, s
 - Review and merge after playing. Pull the latest main before starting again.
 - Avoid both editing the same script or scene at once.
 
-GitHub stores and reviews changes; each person plays their local copy in Godot. Branch protections have not been configured. The `baseline-first-person` tag marks the starting version. Do not force-push over shared work.
+GitHub stores and reviews changes; each person plays their local copy in Godot. Branch protections have not been configured. Commit `d043a02` records the starting version. Do not force-push over shared work.
 
 ## First collaboration
 Hudson chooses one improvement and describes how it should feel. Andrew helps keep its scope small. Try it together before accepting it. A good first task: compare three bat-knockback values.
