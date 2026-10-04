@@ -1,0 +1,97 @@
+HUDSON BUDSON: LOCKER RAID — FIRST PERSON
+A separate first-person edition of the Locker Raid prototype.
+
+START PLAYING
+1. Unzip this folder.
+2. In Godot, choose Import and select HudsonBudson/project.godot.
+3. Open the project and press F5 (Run Project).
+4. Move the mouse to look around. WASD moves relative to your view.
+
+Tested with Godot 4.4.1, Compatibility renderer. This is an editable Godot
+project, not a standalone executable. The hallway is built when you press
+Play, so an empty editor viewport is normal. No plugins or paid assets needed.
+Use a computer with a keyboard and mouse. Touch/controller controls are not
+included. The previous third-person edition is still available separately.
+
+YOUR FIRST MINUTE
+Look left toward locker 101 near where you start. Walk close enough for the
+crosshair to turn gold and show [C] OPEN LOCKER 101. Press C to open it.
+The baseball bat equips automatically. Aim at a nearby zombie and left click.
+Look in other numbered lockers for snacks, protection and other equipment.
+Find the hall pass, then reach the exit pad at the far end of the school.
+You can fight, distract or dodge zombies. Clearing all five is optional.
+
+CONTROLS
+Mouse                Look around
+W / S                Walk forward / backward relative to your view
+A / D                Strafe left / right without changing your aim
+Shift                Sprint
+Space                Jump
+Left click / F       Swing your equipped weapon
+Right click / Q      Hook a zombie near the crosshair; again to release
+E                    Hold to reel in a hooked zombie
+C                    Open the numbered locker under the crosshair
+H                    Eat a stored snack if your health is below 100
+G                    Throw a tennis ball in the direction you face
+1 / 2 / 3            Equip tray / baseball bat / tennis racket
+T                    Embarrass Hudson to fill the mortification meter
+Escape / Tab         Pause, release the cursor, and open the tuning menu
+R                    Restart with fresh inventory and default settings
+
+Aim at a zombie's body. Weapons have different ranges; the bat reaches
+farther than the tray. Attacks and fishing hooks cannot pass through walls.
+The little crosshair flashes when a hit lands. A red edge flash means you
+were hit. Food, armor and speed upgrades work just as in Locker Raid.
+
+COMFORT AND PAUSING
+Escape or Tab opens the pause menu. Adjust mouse sensitivity or field of view.
+You can turn off the gentle weapon motion. The camera has no added head bob
+or forced shake. Lower Zombie speed if you want more time to explore.
+Click RESUME GAME or press Escape/Tab to return and capture the mouse.
+Switching away from the game automatically pauses it. Win and defeat screens
+release the cursor too. All settings and progress reset when you press R.
+
+WHAT'S IN THE LOCKERS
+Apple             Up to 15 health
+Juice box         Up to 20 health
+Lunch sandwich    Up to 35 health
+Baseball bat      40 damage; longer reach and stronger knockback
+Tennis racket     20 damage; fast swing and the strongest knockback
+Tennis balls      3 throws; each distracts nearby zombies for 7 seconds
+Padded backpack   30 protection; stacks up to 60
+Fresh sneakers    20% faster movement
+Notebook          25 mortification; a full meter gives a speed boost
+Hall pass         Permission to escape through the exit
+
+Each numbered locker provides loot once per run. New weapons equip when
+found. You can switch among weapons you own. H chooses a suitable stored
+snack, and never wastes a snack when health is full. The tray starts unlocked
+and deals 25 damage. Locker contents are fixed to make learning repeatable.
+
+EDITING THE GAME
+scripts/player.gd     First-person camera, mouse look, movement and weapon view
+scripts/main.gd       Hallway, aiming, loot actions, UI and pause settings
+scripts/locker.gd     Lockers, opening animations and item reveals
+scripts/inventory.gd  Item effects and weapon stats
+scripts/crosshair.gd  Reticle and hit/damage feedback
+scripts/art.gd        Editable character and item meshes
+scripts/zombie.gd     Zombie movement, distractions and knockback
+scripts/settings.gd   Starting values
+
+For a first experiment, change the bat damage in inventory.gd from 40 to 30.
+Press F5, try it, then decide which version feels better.
+
+RECOVERY
+Checkpoints/First-Person-Clean-Project.zip contains a clean copy of this
+project. Unzip it into a separate folder and import its project.godot.
+
+VERIFICATION
+The included smoke_test.gd checks camera movement, mouse capture, aiming,
+locker interaction, combat, inventory, pause, winning, losing and restart.
+Run from a terminal with a graphical display (not --headless):
+  godot --path HudsonBudson --script res://tests/smoke_test.gd
+See Test-Results.txt for this build's results.
+
+This remains a short single-player prototype with one hallway, per-run
+inventory and no saved progression. Preview images are actual game renders
+with staged positions and equipment for inspection.

@@ -1,0 +1,49 @@
+Godot 4.4.1 first-person edition
+43 automated checks with a graphical display and Compatibility renderer
+
+PASS Original enemies and lockers preserved
+PASS Camera attached at eye height
+PASS Player body hidden from first-person camera
+PASS Mouse captured for play
+PASS Mouse event turns and tilts camera
+PASS Upward look is clamped
+PASS Downward look is clamped
+PASS W moves relative to view heading
+PASS D strafes without turning the view
+PASS Backpedaling keeps aim forward
+PASS Space jumps
+PASS Cannot open distant locker
+PASS Nearby locker must be aimed at
+PASS Crosshair plus C opens locker and equips bat
+PASS Equipped weapon appears in viewmodel
+PASS Search cannot duplicate loot
+PASS Locker door animation completes
+PASS Aimed bat hits and shows hit marker
+PASS Bat knockback preserved
+PASS Attack cooldown prevents spam
+PASS Looking away vertically does not hit zombie
+PASS Walls block attacks and hooks
+PASS Crosshair hook selects visible aimed zombie
+PASS E reels hooked zombie
+PASS Racket damage and knockback preserved
+PASS Can switch back to starter tray
+PASS Full health preserves food
+PASS Food heals and is consumed
+PASS Backpack and damage feedback work
+PASS Damage immunity cooldown preserved
+PASS Sneakers increase movement speed
+PASS Tennis balls consume one and distract zombies
+PASS Distraction expires
+PASS Notebook activates speed boost
+PASS Pause releases mouse and freezes enemies
+PASS Mouse cannot turn camera while paused
+PASS Resume captures mouse
+PASS Switching away automatically pauses
+PASS Exit requires hall pass
+PASS Hall pass escape wins and releases cursor
+PASS Restart resets inventory and camera heading
+PASS Restart preserves single keyboard and mouse bindings
+PASS Defeat screen works
+RESULT: 43 checks, 0 failures
+
+The game and its locker and pause views were also rendered and visually inspected.

@@ -1,0 +1,8 @@
+.godot/
+exports/
+build/
+*.tmp
+*.log
+.DS_Store
+.env
+.env.*
