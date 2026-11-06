@@ -1,0 +1,38 @@
+name: Hallway validation toolchain
+on:
+  push:
+    branches: [build/hallway-v84-v88-toolchain]
+    paths: [.github/workflows/hallway-toolchain.yml]
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Fetch pinned engine
+        run: |
+          mkdir -p toolchain
+          curl --fail --location --retry 3 https://github.com/godotengine/godot-builds/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip -o toolchain/godot441.zip
+          unzip -t toolchain/godot441.zip
+          sha256sum toolchain/godot441.zip > toolchain/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: godot-4.4.1-linux
+          path: toolchain/
+          retention-days: 7
+      - name: Fetch neural speech runtime and model
+        run: |
+          mkdir -p speech/wheels
+          python -m pip download 'kokoro-onnx==0.4.9' --dest speech/wheels
+          curl --fail --location --retry 3 https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.int8.onnx -o speech/kokoro-v1.0.int8.onnx
+          curl --fail --location --retry 3 https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin -o speech/voices-v1.0.bin
+          sha256sum speech/*.onnx speech/*.bin > speech/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hallway-neural-speech-tools
+          path: speech/
+          retention-days: 7
